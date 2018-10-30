@@ -7,6 +7,7 @@ import navigation from '../page/navigation'
 import page from '../page/page'
 import list from '../page/list'
 import collapse from '../page/collapse'
+import form from '../page/form'
 var style={
     list:{
       margin:"20px",
@@ -34,6 +35,7 @@ export default class Content extends Component{
                 <Route path={'/page'} component={page}></Route>
                 <Route path={'/list'} component={list}></Route>
                 <Route path={'/collapse'} component={collapse}></Route>
+                <Route path={'/form'} component={form}></Route>
             </div>
         )
     }

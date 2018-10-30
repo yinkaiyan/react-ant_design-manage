@@ -26,6 +26,10 @@ export default class topMenu extends Component{
         console.log(this.props)
         this.props.history.push('/navigation')
     }
+    formClick=(index)=>{
+        console.log(this.props)
+        this.props.history.push('/form')
+    }
     render(){
         return (
             <div>
@@ -37,7 +41,7 @@ export default class topMenu extends Component{
                         defaultSelectedKeys={['']}
                         style={{ lineHeight: '64px' }}
                     >
-                        <Menu.Item key="1">nav 1</Menu.Item>
+                        <Menu.Item key="1" onClick={this.formClick.bind(this,'/form')}>form表单</Menu.Item>
                         <Menu.Item key="2"  onClick={this.handleClick.bind(this,'/navigation')}>嵌套路由</Menu.Item>
                         <Menu.Item key="3">nav 3</Menu.Item>
                     </Menu>
