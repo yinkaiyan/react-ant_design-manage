@@ -14,6 +14,8 @@ function handleMenuClick(e) {
 function handleButtonClick(e) {
     message.info("选中"+e.key);
 }
+//生命周期
+
 const menu01 = (
     <Menu onClick={handleMenuClick}>
       <Menu.Item>
@@ -48,15 +50,26 @@ const menu03 = (
     </Menu>
 );
 export default class drop extends Component{
-  componentWillMount (){
-    console.log(this.props)
-  }
   state = {
    
+  }
+  constructor(props,context) {
+    super(props,context);
+    console.log("接收父组件传值最先执行");
+    console.log(this.props);
+  }
+  componentWillMount (){
+    console.log(this.props.comment);
+    console.log("组件将要挂载");
+  }
+  componentDidMount(){
+    console.log(this.props.comment);
+    console.log("组件第一次渲染完成，此时dom节点已经生成，可以在这里调用ajax请求，返回数据setState后组件会重新渲染");
   }
   render() {
     return (
         <div>
+            {this.props.value}45
             <div style={style.list}>
                 <Dropdown overlay={menu01}>
                     <a className="ant-dropdown-link" href="javascript:;">

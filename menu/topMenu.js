@@ -2,7 +2,6 @@ import React,{Component} from 'react'
 import { withRouter } from 'react-router-dom'
 
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
-
 const { SubMenu } = Menu;
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -16,9 +15,16 @@ const top = {
         borderRadius:"4px",
     },
 };
+
+@withRouter
+
 export default class topMenu extends Component{
     componentWillMount (){
         console.log(this.props)
+    }
+    handleClick=(index)=>{
+        console.log(this.props)
+        this.props.history.push('/navigation')
     }
     render(){
         return (
@@ -28,11 +34,11 @@ export default class topMenu extends Component{
                     <Menu
                         theme="dark"
                         mode="horizontal"
-                        defaultSelectedKeys={['2']}
+                        defaultSelectedKeys={['']}
                         style={{ lineHeight: '64px' }}
                     >
                         <Menu.Item key="1">nav 1</Menu.Item>
-                        <Menu.Item key="2">nav 2</Menu.Item>
+                        <Menu.Item key="2"  onClick={this.handleClick.bind(this,'/navigation')}>嵌套路由</Menu.Item>
                         <Menu.Item key="3">nav 3</Menu.Item>
                     </Menu>
                 </Header>

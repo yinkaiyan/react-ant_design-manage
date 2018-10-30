@@ -59,9 +59,36 @@ export default class leftMenu extends Component{
                         </NavLink>
                     </Menu.Item>
 
+                    <Menu.Item key="4">
+                        <NavLink to={'/page'}>
+                            <Icon type="shop" theme="outlined" /> 
+                            <span>
+                                分页
+                            </span>
+                        </NavLink>
+                    </Menu.Item>
+
+                    <Menu.Item key="5">
+                        <NavLink to={'/list'}>
+                            <Icon type="pic-left" theme="outlined" />
+                            <span>
+                                列表
+                            </span>
+                        </NavLink>
+                    </Menu.Item>
+
+                    <Menu.Item key="6">
+                        <NavLink to={'/collapse'}>
+                            <Icon type="up-square" theme="outlined" />
+                            <span>
+                                折叠面板
+                            </span>
+                        </NavLink>
+                    </Menu.Item>
+
                     <SubMenu key="sub1" title={<span><Icon type="appstore" /><span>菜单01</span></span>}>
 
-                        <Menu.Item key="4">
+                        <Menu.Item key="22">
                             <NavLink to={'/'}>按钮</NavLink>
                         </Menu.Item>
                         <Menu.Item key="5">
@@ -69,13 +96,13 @@ export default class leftMenu extends Component{
                         </Menu.Item>
 
                         <SubMenu key="sub2" title="Submenu">
-                            <Menu.Item key="6">Option 7</Menu.Item>
-                            <Menu.Item key="7">Option 8</Menu.Item>
+                            <Menu.Item key="23">Option 7</Menu.Item>
+                            <Menu.Item key="24">Option 8</Menu.Item>
                         </SubMenu>
 
                     </SubMenu>
 
-                    <Menu.Item key="8">
+                    <Menu.Item key="25">
                         <Icon type="file" />
                         <span>File</span>
                     </Menu.Item>

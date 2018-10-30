@@ -12,8 +12,18 @@ var style={
 }
 
 export default class navTest extends Component{
+  constructor(props,context) {
+    super(props,context);
+    console.log("接收父组件传值最先执行");
+    console.log(this.props);
+  }
   componentWillMount (){
-    console.log(this.props)
+    console.log(this.props.value);
+    console.log("组件将要挂载");
+  }
+  componentDidMount(){
+    console.log(this.props.value);
+    console.log("组件第一次渲染完成，此时dom节点已经生成，可以在这里调用ajax请求，返回数据setState后组件会重新渲染");
   }
   Click() {
     console.log("click");

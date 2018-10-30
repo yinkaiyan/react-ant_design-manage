@@ -79,7 +79,7 @@ export default class navigation extends Component{
                     >
                         <SubMenu key="sub1" title={<span><Icon type="setting" /><span>嵌套路由test</span></span>}>
                         <Menu.Item key="1">
-                            <NavLink to={'/navigation/navTest1'}>
+                            <NavLink to={'/navigation/navTest1'} value="000">
                                 嵌套路由navTest01测试
                             </NavLink>
                         </Menu.Item>
