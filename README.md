@@ -6,6 +6,9 @@ npm install
 # 运行
 npm start
 
+# 打包部署
+npm run build
+
 # Ant Design
 https://ant.design/docs/react/getting-started-cn
 
