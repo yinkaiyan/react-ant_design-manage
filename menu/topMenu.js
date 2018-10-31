@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 import { withRouter } from 'react-router-dom'
 
-import { Layout, Menu, Breadcrumb, Icon } from 'antd';
+import { Layout, Menu, Breadcrumb, Icon,Avatar  } from 'antd';
 const { SubMenu } = Menu;
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -30,6 +30,9 @@ export default class topMenu extends Component{
         console.log(this.props)
         this.props.history.push('/form')
     }
+    headClick=(e)=>{
+        this.props.history.push('/personal')
+    }
     render(){
         return (
             <div>
@@ -39,12 +42,13 @@ export default class topMenu extends Component{
                         theme="dark"
                         mode="horizontal"
                         defaultSelectedKeys={['']}
-                        style={{ lineHeight: '64px' }}
+                        style={{ lineHeight: '64px',float:"left" }}
                     >
                         <Menu.Item key="1" onClick={this.formClick.bind(this,'/form')}>form表单</Menu.Item>
-                        <Menu.Item key="2"  onClick={this.handleClick.bind(this,'/navigation')}>嵌套路由</Menu.Item>
-                        <Menu.Item key="3">nav 3</Menu.Item>
+                        <Menu.Item key="2" onClick={this.handleClick.bind(this,'/navigation')}>嵌套路由</Menu.Item>
+                        <Menu.Item key="3" onClick={this.headClick.bind(this,'/navigation')}>个人中心</Menu.Item>
                     </Menu>
+                    <Avatar size={48} onClick={this.headClick.bind(this,'/personal')} style={{float:"right",margin:"6px -24px 0 0",cursor: "pointer"}} src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
                 </Header>
             </div>
         )

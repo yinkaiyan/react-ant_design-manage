@@ -6,10 +6,12 @@ npm install
 # 运行
 npm start
 
+# Ant Design
+https://ant.design/docs/react/getting-started-cn
 
-![image]( http://www.yinkaiyan.cn/images/15.png )
+![image]( http://www.yinkaiyan.cn/images/16.jpg )
 
-![image]( http://www.yinkaiyan.cn/images/16.png )
+![image]( http://www.yinkaiyan.cn/images/17.jpg )
 
-![image]( http://www.yinkaiyan.cn/images/17.png )
+![image]( http://www.yinkaiyan.cn/images/15.jpg )
 

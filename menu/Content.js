@@ -8,6 +8,13 @@ import page from '../page/page'
 import list from '../page/list'
 import collapse from '../page/collapse'
 import form from '../page/form'
+import day from '../page/date/day'
+import date from '../page/date/date'
+import skeleton from '../page/skeleton'
+import baseUrl from '../page/config/env'
+import information from '../page/config/fetch'
+import personal from '../page/personal'
+import score from '../page/score'
 var style={
     list:{
       margin:"20px",
@@ -24,6 +31,10 @@ export default class Content extends Component{
     componentDidMount(){
         console.log(this.state.aaa);
     }
+    componentDidMount(){
+        console.log(baseUrl);
+        information.setPost();
+    }
     //this.props.history.push('/user/list')
     //onClick={this.handleClick.bind(this,index)}
     render(){
@@ -36,6 +47,11 @@ export default class Content extends Component{
                 <Route path={'/list'} component={list}></Route>
                 <Route path={'/collapse'} component={collapse}></Route>
                 <Route path={'/form'} component={form}></Route>
+                <Route path={'/day'} component={day}></Route>
+                <Route path={'/date'} component={date}></Route>
+                <Route path={'/skeleton'} component={skeleton}></Route>
+                <Route path={'/personal'} component={personal}></Route>
+                <Route path={'/score'} component={score}></Route>
             </div>
         )
     }

@@ -69,7 +69,6 @@ export default class drop extends Component{
   render() {
     return (
         <div>
-            {this.props.value}45
             <div style={style.list}>
                 <Dropdown overlay={menu01}>
                     <a className="ant-dropdown-link" href="javascript:;">

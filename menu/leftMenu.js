@@ -86,26 +86,60 @@ export default class leftMenu extends Component{
                         </NavLink>
                     </Menu.Item>
 
-                    <SubMenu key="sub1" title={<span><Icon type="appstore" /><span>菜单01</span></span>}>
+                    <SubMenu key="sub1" title={<span><Icon type="clock-circle" /><span>时间选择</span></span>}>
 
-                        <Menu.Item key="22">
+                        <Menu.Item key="7">
+                            <NavLink to={'/day'}>
+                               <Icon type="clock-circle" />
+                                <span>
+                                    时间(时间选择)
+                                </span>
+                            </NavLink>
+                        </Menu.Item>
+                        <Menu.Item key="8">
+                            <NavLink to={'/date'}>
+                                <Icon type="clock-circle" />
+                                <span>
+                                    时间(日期选择)
+                                </span>
+                            </NavLink>
+                        </Menu.Item>
+
+                    </SubMenu>
+
+                    <Menu.Item key="9">
+                        <NavLink to={'/skeleton'}>
+                            <Icon type="border-inner" theme="outlined" />
+                            <span>
+                                文章模版
+                            </span>
+                        </NavLink>
+                    </Menu.Item>
+
+                    <Menu.Item key="10">
+                        <NavLink to={'/score'}>
+                            <Icon type="star" theme="outlined" />
+                            <span>
+                                评分
+                            </span>
+                        </NavLink>
+                    </Menu.Item>
+
+                    {/* <SubMenu key="sub1" title={<span><Icon type="clock-circle" /><span>时间选择</span></span>}>
+
+                        <Menu.Item key="7">
                             <NavLink to={'/'}>按钮</NavLink>
                         </Menu.Item>
-                        <Menu.Item key="5">
+                        <Menu.Item key="8">
                             <NavLink to={'/page/Profile'}>个人中心</NavLink>
                         </Menu.Item>
 
                         <SubMenu key="sub2" title="Submenu">
-                            <Menu.Item key="23">Option 7</Menu.Item>
-                            <Menu.Item key="24">Option 8</Menu.Item>
+                            <Menu.Item key="9">Option 7</Menu.Item>
+                            <Menu.Item key="10">Option 8</Menu.Item>
                         </SubMenu>
 
-                    </SubMenu>
-
-                    <Menu.Item key="25">
-                        <Icon type="file" />
-                        <span>File</span>
-                    </Menu.Item>
+                    </SubMenu> */}
 
                 </Menu>
                 
